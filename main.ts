@@ -29,7 +29,7 @@ namespace robotCar {
             }
         }
     }
-    //% block="$speed の早さで直進"
+    //% block="%speed の早さで直進"
     //% speed.shadow="speedPicker"
     export function goStraight(speed:number){
         wheel(Direction.Left,speed);
