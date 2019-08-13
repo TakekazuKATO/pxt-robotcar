@@ -29,13 +29,13 @@ namespace robotCar {
             }
         }
     }
-    //%block "$speed の早さで直進"
+    //% block="$speed の早さで直進"
     //% speed.shadow="speedPicker"
     export function goStraight(speed:number){
         wheel(Direction.Left,speed);
         wheel(Direction.Right,speed);
     }
-    //%block "$speedの早さで $dir 回転"
+    //% block="$speedの早さで $dir 回転"
     //% speed.shadow="speedPicker"
     export function turn(dir:Direction, speed:number){
         if(dir==Direction.Left){
