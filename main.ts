@@ -6,7 +6,7 @@ namespace robotCar {
         //% block="右",
         Right
     }
-    //% block="%dir のタイヤを早さ $speed %で動かす"
+    //% block="%dir のタイヤを $speed ％の早さで動かす"
     //% speed.shadow="speedPicker"
     //% speed.defl=0
     export function wheel(dir: Direction, speed: number) {
