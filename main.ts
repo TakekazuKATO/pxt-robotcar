@@ -10,21 +10,22 @@ namespace robotCar {
     //% speed.shadow="speedPicker"
     //% speed.defl=0
     export function wheel(dir: Direction, speed: number) {
+        let val = Math.abs(speed*1023/100);
         if (dir == Direction.Left) {
             if (speed < 0) {
                 pins.analogWritePin(AnalogPin.P14, 0)
-                pins.analogWritePin(AnalogPin.P13, Math.abs(speed))
+                pins.analogWritePin(AnalogPin.P13, val);
             } else {
                 pins.analogWritePin(AnalogPin.P13, 0)
-                pins.analogWritePin(AnalogPin.P14, speed)
+                pins.analogWritePin(AnalogPin.P14, val);
             }
         } else {
             if (speed < 0) {
                 pins.analogWritePin(AnalogPin.P16, 0)
-                pins.analogWritePin(AnalogPin.P15, Math.abs(speed))
+                pins.analogWritePin(AnalogPin.P15, val);
             } else {
                 pins.analogWritePin(AnalogPin.P15, 0)
-                pins.analogWritePin(AnalogPin.P16, speed)
+                pins.analogWritePin(AnalogPin.P16, val);
             }
         }
     }
