@@ -35,7 +35,7 @@ namespace robotCar {
         wheel(Direction.Left,speed);
         wheel(Direction.Right,speed);
     }
-    //% block="$speedの早さで $dir 回転"
+    //% block="$speed ％の早さで $dir 回転"
     //% speed.shadow="speedPicker"
     export function turn(dir:Direction, speed:number){
         if(dir==Direction.Left){
