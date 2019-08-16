@@ -13,19 +13,19 @@ namespace robotCar {
         let val = Math.constrain(Math.abs(speed*1023/100),0,1023);
         if (dir == Direction.Left) {
             if (speed < 0) {
-                pins.analogWritePin(AnalogPin.P14, 0)
-                pins.analogWritePin(AnalogPin.P13, val);
-            } else {
                 pins.analogWritePin(AnalogPin.P13, 0)
                 pins.analogWritePin(AnalogPin.P14, val);
+            } else {
+                pins.analogWritePin(AnalogPin.P14, 0)
+                pins.analogWritePin(AnalogPin.P13, val);
             }
         } else {
             if (speed < 0) {
-                pins.analogWritePin(AnalogPin.P16, 0)
-                pins.analogWritePin(AnalogPin.P15, val);
-            } else {
                 pins.analogWritePin(AnalogPin.P15, 0)
                 pins.analogWritePin(AnalogPin.P16, val);
+            } else {
+                pins.analogWritePin(AnalogPin.P16, 0)
+                pins.analogWritePin(AnalogPin.P15, val);
             }
         }
     }
@@ -35,7 +35,7 @@ namespace robotCar {
         wheel(Direction.Left,speed);
         wheel(Direction.Right,speed);
     }
-    //% block="$speedの早さで $dir 回転"
+    //% block="$speed ％の早さで $dir 回転"
     //% speed.shadow="speedPicker"
     export function turn(dir:Direction, speed:number){
         if(dir==Direction.Left){
